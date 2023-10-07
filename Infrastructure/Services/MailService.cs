@@ -41,28 +41,28 @@ namespace Infrastructure.Services
     <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
     <title>Email Confirmation</title>
 </head>
-<body style=""font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: tomato; color: lime;"">
+<body style=""font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: blue; color: lime;"">
 
-    <table style=""max-width: 600px; margin: 0 auto; background-color: tomato; border-collapse: collapse;"">
+    <table style=""max-width: 600px; margin: 0 auto; background-color: blue; border-collapse: collapse;"">
         <tr>
-            <td style=""padding: 20px; text-align: center; background-color: red;"">
-                <h1 style=""color: lime;"">Email Confirmation</h1>
+            <td style=""padding: 20px; text-align: center; background-color: yellow;"">
+                <h1 style=""color: black;"">Email Confirmation</h1>
             </td>
         </tr>
         <tr>
             <td style=""padding: 20px;"">
                 <p>Hello {email},</p>
-                <p style=""color: #cccccc;"">Thank you for registering on our website. Please click the button below to confirm your email address:</p>
+                <p style=""color: skyblue;"">Thank you for registering on our website. Please click the button below to confirm your email address:</p>
                 <p style=""text-align: center;"">
-                    <a href=""{url}"" style=""display: inline-block; padding: 10px 20px; background-color: red; color: lime; text-decoration: none; border-radius: 5px;"">Confirm Email</a>
+                    <a href=""{url}"" style=""display: inline-block; padding: 10px 20px; background-color: blue; color: lime; text-decoration: none; border-radius: 5px;"">Confirm Email</a>
                 </p>
-                <p style=""color: #cccccc;"">If you did not request this confirmation, you can ignore this email.</p>
-                <p style=""color: #cccccc;"">Best regards,<br> The IUsta Team</p>
+                <p style=""color: skyblue;"">If you did not request this confirmation, you can ignore this email.</p>
+                <p style=""color: skyblue;"">Best regards,<br> The IUsta Team</p>
             </td>
         </tr>
         <tr>
-            <td style=""padding: 20px; text-align: center; background-color: tomato;"">
-                <p style=""margin: 0; color: #cccccc;"">© {DateTime.Now.Year} IUsta. All rights reserved.</p>
+            <td style=""padding: 20px; text-align: center; background-color: blue;"">
+                <p style=""margin: 0; color: skyblue;"">© {DateTime.Now.Year} IUsta. All rights reserved.</p>
             </td>
         </tr>
     </table>
@@ -101,7 +101,7 @@ namespace Infrastructure.Services
     <style>
         body {{
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: blue;
             margin: 0;
             padding: 0;
         }}
@@ -158,7 +158,7 @@ namespace Infrastructure.Services
     <style>
         body {{
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: blue;
             margin: 0;
             padding: 0;
         }}
@@ -235,7 +235,7 @@ namespace Infrastructure.Services
     <style>
         body {{
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: blue;
             margin: 0;
             padding: 0;
         }}

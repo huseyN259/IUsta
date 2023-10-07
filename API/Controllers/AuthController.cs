@@ -30,6 +30,25 @@ namespace API.Controllers
             _mailService = mailService;
         }
 
+        private async Task<AuthTokenDTO> GenerateToken(User user)
+        {
+            var roles = await _userManager.GetRolesAsync(user);
+            var claims = await _userManager.GetClaimsAsync(user);
+
+            var accessToken = _jwtService.GenerateSecurityToken(user.Id, user.Email, roles, claims);
+
+            var refreshToken = Guid.NewGuid().ToString("N").ToLower();
+
+            user.RefreshToken = refreshToken;
+            await _userManager.UpdateAsync(user);
+
+            return new AuthTokenDTO
+            {
+                AccessToken = accessToken,
+                RefreshToken = refreshToken,
+            };
+        }
+
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterRequest request)
         {
@@ -99,24 +118,7 @@ namespace API.Controllers
             return Unauthorized();
         }
 
-        private async Task<AuthTokenDTO> GenerateToken(User user)
-        {
-            var roles = await _userManager.GetRolesAsync(user);
-            var claims = await _userManager.GetClaimsAsync(user);
-
-            var accessToken = _jwtService.GenerateSecurityToken(user.Id, user.Email, roles, claims);
-
-            var refreshToken = Guid.NewGuid().ToString("N").ToLower();
-
-            user.RefreshToken = refreshToken;
-            await _userManager.UpdateAsync(user);
-
-            return new AuthTokenDTO
-            {
-                AccessToken = accessToken,
-                RefreshToken = refreshToken,
-            };
-        }
+        
 
         
 
